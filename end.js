@@ -13,16 +13,7 @@ finalScore.innerText = mostRecentScore;
 
 let pattern = /\w+/g;
 
-username.addEventListener("keyup", () => {
-  saveScoreBtn.disabled = !username.value;
-  saveScoreBtn.disabled = !username.value.match(pattern);
 
-  if (username.value.match(pattern)) {
-    document.getElementById("error").style.display = "none";
-  } else {
-    document.getElementById("error").style.display = "block";
-  }
-});
 
 saveHighScore = (e) => {
   e.preventDefault();

@@ -58,6 +58,7 @@ nav .navigation {
 }
 
 #menu-close {
+  cursor: pointer;
   display: none;
 }
 
@@ -107,7 +108,7 @@ nav .navigation ul li a:hover::after {
 
 /* Home */
 #home {
-  background-image: linear-gradient(rgba(9,5,54,0.3),rgba(5,4,46,0.7)),url(/images/back.jpg);
+ background: linear-gradient(rgba(31, 30, 45, 0.3), rgba(10, 8, 113, 0.7)), url(back.jpg);
   width: 100%;
   height: 100vh;
   background-size: cover;
@@ -241,6 +242,7 @@ nav .navigation ul li a:hover::after {
   height: 60%;
   background-size: cover;
   background-position: center;
+  cursor: pointer;
 }
 
 #course .courses .details{
@@ -360,7 +362,7 @@ nav .navigation ul li a:hover::after {
 
 #experts .expert-box .profile {
   background: #fafaf1;
-  padding: 30px 10px;
+  object-fit: contain;
 }
 
 .pro-links{
@@ -374,6 +376,11 @@ nav .navigation ul li a:hover::after {
   transition: 0.3s ease;
 }
 
+.pro-links a{
+  text-decoration: none;
+  color:#101c32;
+  cursor: pointer;
+}
 .pro-links i:hover{
   background: rgb(21, 21, 100);
   color: #fff;
@@ -518,10 +525,15 @@ footer .copyright .pro-links i:hover{
   background: #FDC93B;
   color: #2c2c2c;
 }
+footer .copyright .pro-links a{
+  text-decoration: none;
+  color:#101c32;
+  cursor: pointer;
+}
 
 /* About */
 #about-home {
-  background-image: linear-gradient(rgba(9,5,54,0.3),rgba(5,4,46,0.7)),url(/images/back1.jpg);
+  background-image: linear-gradient(rgba(9,5,54,0.3),rgba(5,4,46,0.7)),url(back1.jpg);
   width: 100%;
   height: 60vh;
   background-size: cover;
