@@ -8,10 +8,14 @@ let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
-
+let sound;
 let availableQuesions = [];
 let questions = [];
-
+function playAudio(sound) {
+        
+  sound.load(); // Ensure the audio is loaded
+  sound.play();
+}
 fetch("questions.json")
   .then((res) => {
     return res.json();
@@ -46,7 +50,13 @@ choices.forEach((choice) => {
       selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
 
     if (classToApply === "correct") {
+      sound = new Audio('right.mp3');
+      playAudio(sound);
       incrementScore(CORRECT_BONUS);
+    }
+    else {
+      sound = new Audio('wrong.mp3');
+      playAudio(sound);
     }
 
     selectedChoice.parentElement.classList.add(classToApply);

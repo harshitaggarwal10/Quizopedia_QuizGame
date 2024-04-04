@@ -13,11 +13,15 @@ finalScore.innerText = mostRecentScore;
 
 let pattern = /\w+/g;
 
-
-
+function playAudio() {
+  const audio = new Audio('quiz_over.mp3');
+  audio.load(); // Ensure the audio is loaded
+  audio.play();
+}
+playAudio();
 saveHighScore = (e) => {
   e.preventDefault();
-
+  
   const score = {
     score: mostRecentScore,
     name: username.value,
